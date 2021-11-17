@@ -405,14 +405,13 @@ resource "azurerm_postgresql_flexible_server" "test" {
   location               = azurerm_resource_group.test.location
   administrator_login    = "adminTerraform"
   administrator_password = "123wsxQAZ"
-  zone                   = "1"
   version                = "13"
   backup_retention_days  = 10
   storage_mb             = 65536
   delegated_subnet_id    = azurerm_subnet.test.id
   private_dns_zone_id    = azurerm_private_dns_zone.test.id
   sku_name               = "GP_Standard_D2s_v3"
-  zone                   = "2"
+  zone                   = "1"
 
   maintenance_window {
     day_of_week  = 0
